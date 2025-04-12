@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource path="res://scripts/ForestEvent.gd" type="Script" id=1]
+[ext_resource path="res://scripts/RochaMisteriosa.gd" type="Script" id=2]
+
+[node name="ForestScene" type="Node3D"]
+[instance id=1]
+[instance id=2]
+
+[node name="Environment" type="Environment"]
+[instance id=1]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D"]
+[instance id=1]
+
+[node name="ForestTerrain" type="MeshInstance3D"]
+[instance id=1]
+
+[node name="Trees" type="Node3D"]
+[instance id=1]
+
+[node name="CampSite" type="Node3D"]
+[instance id=1]
+
+[node name="MysteriousRock" type="Node3D"]
+[instance id=2]
