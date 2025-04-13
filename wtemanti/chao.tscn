@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1nhgedqc30vb"]
+
+[ext_resource type="PackedScene" uid="uid://d0alavo2fh7cx" path="res://character_body_3d.tscn" id="1_su4g4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ldd2s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f3bcv"]
+
+[sub_resource type="Sky" id="Sky_hfl6v"]
+
+[sub_resource type="Environment" id="Environment_hnb0r"]
+background_mode = 2
+sky = SubResource("Sky_hfl6v")
+
+[node name="chao" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37897, -0.112453, -0.683327)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(126.45, 0, 0, 0, 1.0049, 0, 0, 0, 97.8557, 0, 0, 0)
+mesh = SubResource("BoxMesh_ldd2s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+transform = Transform3D(1.05963, 0, 0, 0, -0.185684, 0, 0, 0, 0.034033, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(-0.973381, 0, 0, 0, 0.978444, 0, 0, 0, 0.999512, -0.0135728, 0, 0)
+shape = SubResource("BoxShape3D_f3bcv")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="MeshInstance3D"]
+environment = SubResource("Environment_hnb0r")
+
+[node name="Control" type="Control" parent="MeshInstance3D/WorldEnvironment"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_su4g4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78782, 1.54525, 5.32578)
