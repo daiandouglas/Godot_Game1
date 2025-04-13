@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3]
 
-[ext_resource path="res://scripts/ForestEvent.gd" type="Script" id=1]
-[ext_resource path="res://scripts/RochaMisteriosa.gd" type="Script" id=2]
+[ext_resource path="res://scripts/ForestEnvironment.gd" type="Script" id=1]
+[ext_resource path="res://scripts/ForestEvent.gd" type="Script" id=2]
+[ext_resource path="res://scripts/RochaMisteriosa.gd" type="Script" id=3]
 
 [node name="ForestScene" type="Node3D"]
 [instance id=1]
-[instance id=2]
 
 [node name="Environment" type="Environment"]
 [instance id=1]
@@ -23,4 +23,4 @@
 [instance id=1]
 
 [node name="MysteriousRock" type="Node3D"]
-[instance id=2]
+[instance id=3]

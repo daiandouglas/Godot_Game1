@@ -1,0 +1,1 @@
+# Interações com objetos
